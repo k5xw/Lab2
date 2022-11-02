@@ -1,4 +1,9 @@
-include 'emu8086.inc'
-   ORG 100h
-   PRINTN 'Hello World!'       
-   RET
+org 100h
+
+mov dx, offset s
+
+mov ah, 9h
+int 21h
+
+ret
+s db "hello word $"
